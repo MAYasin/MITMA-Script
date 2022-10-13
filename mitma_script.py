@@ -55,7 +55,7 @@ for aR in arpResponse:
     for gR in gatewayResults:
         if aR["ipaddress"] in gR:
             interfaceName = getInterfaceName(gR)
-            gateways = {"interface" : interfaceName,"ipaddress" : aR["ipaddress"], "macaddress" : aR["macaddress"]}
+            gateways.append({"interface" : interfaceName,"ipaddress" : aR["ipaddress"], "macaddress" : aR["macaddress"]})
 
 #look at this
 gatewayInfo = gateways[0]
@@ -74,7 +74,7 @@ print(".....Man In the Middle Attack.....")
 print("......Let the hacking begin.......")
 
 for id, aR in enumerate(arpResponse):
-    print("ID: "+ id +"IP Address: " + aR["ipaddress"] + " MAC Address: " + aR["macaddress"])
+    print("ID: "+ str(id) +"IP Address: " + aR["ipaddress"] + " MAC Address: " + aR["macaddress"])
 
 while True:
         try:
