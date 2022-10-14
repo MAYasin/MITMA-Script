@@ -73,8 +73,8 @@ if len(clientInfo) == 0:
 print(".....Man In the Middle Attack.....")
 print("......Let the hacking begin.......")
 
-for id, aR in enumerate(arpResponse):
-    print("ID: "+ str(id) +"IP Address: " + aR["ipaddress"] + " MAC Address: " + aR["macaddress"])
+for id, cI in enumerate(clientInfo):
+    print("ID: "+ str(id) +" IP Address: " + cI["ipaddress"] + " MAC Address: " + cI["macaddress"])
 
 while True:
         try:
